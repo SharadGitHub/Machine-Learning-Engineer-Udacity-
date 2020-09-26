@@ -8,5 +8,5 @@ website which will be sent to the deployed model throught the API endpoints whic
 positive or negative. 
 
 ## Project-2
-In this project, we have to train and deploy a network to classify if a text sample is plagiarised or not. A big part
+In this project, we have to train and deploy a network to classify a text sample as plagiarised or not. A big part
 of this project was to extract useful features from the text such as containment features, longest common subsequence
