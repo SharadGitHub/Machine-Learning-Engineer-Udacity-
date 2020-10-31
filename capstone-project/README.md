@@ -8,7 +8,7 @@ Data can be downloaded from the offical website of cityscapes (https://www.citys
 
 There are 20 classes in the dataset.
 
-There are 3 text files included in the `dataset/` directory which contain the names of all the images and their respective masks for train, val and test sets. Upon downloading the data as mentioned above, one should change the data directory argument in `main.py` file. 
+There are 3 text files included in the `dataset/` directory which contain the names of all the images and their respective masks for train, val and test sets. Upon downloading the data as mentioned above, one should place the `gtFine` and `leftImg8bit` folders in this `dataset` directory and change the data directory argument in `main.py` file. 
 
 
 ### Requirements
@@ -21,9 +21,13 @@ tqdm</br>
 
 ### Training
 
-The Unet architecture is used for training, which consits of encoder and decoder.
+The Unet architecture is used for training, which consits of encoder and decoder. Network is trained for 200 epochs with batch size of 12. 
 
 ### Loss
 
 Both Cross Entropy and dice loss are available but for training, primarily cross entropy is used. Dataset is highly imbalance, hence classes are assigned weights which are used to calculate cross entropy.
+
+### Predictions
+The progress of the training, losses and metrics could be seen in the log file present in the `exp_unet3` directory. <br>
+The output of the network and its actual mask could also be checked in the `images` directory. 
 
