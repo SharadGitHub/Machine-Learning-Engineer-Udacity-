@@ -67,14 +67,13 @@ def snapshot(model, loss, out_dir ,suffix = 1):
 	torch.save(checkpoint, path + ('epoch_' + str(suffix) +'.pth'))
 	
 	
-def load_model(epoch_number, dir_type):
-	path = 'checkpoints/{}/'.format(dir_type)
+def load_model(epoch_number, path):
 	checkpoint = torch.load( path + 'epoch_' + str(epoch_number) + '.pth')
 	model = checkpoint['model']
 	model.load_state_dict(checkpoint['state_dict'])
-	optimizer = checkpoint['optimizer']
+# 	optimizer = checkpoint['optimizer']
 	
-	return model, optimizer
+	return model
 
 def save_mask(im, filename, out_dir):
 	'''Save as image from pytorch tensor'''
