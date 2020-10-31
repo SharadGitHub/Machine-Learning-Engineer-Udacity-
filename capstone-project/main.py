@@ -165,7 +165,7 @@ def train(network, criterion, optimizer, scheduler, loaders, epochs, args):
 
 if __name__ == '__main__':
 	
-	parser = argparse.ArgumentParser(description = "Octave Unet experiments")
+	parser = argparse.ArgumentParser(description = "Unet experiments")
 	
 	parser.add_argument('-bs', '--batch_size', help = 'Batch size', default= 12, type=int )
 	parser.add_argument('-size', '--img_size', help = 'Image size', default= 704, type=int )
